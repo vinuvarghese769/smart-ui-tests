@@ -1,3 +1,7 @@
+# smart-ui-tests
+SDET Technical Exercise
+Robot Framework UI tests with Selenium and Python
+
 # Smart UI Tests using Robot Framework
 
 This project demonstrates UI automation using Robot Framework, Selenium, and Python.
