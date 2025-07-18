@@ -8,8 +8,9 @@ Test Teardown     Close Browser
 *** Test Cases ***
 Search For Existing Product
     Search Product    tshirt
-    Verify Product Search Result    tshirt
+    Verify Product Search Result    T-Shirt
 
 Search For Nonexistent Product
-    Search Product    abcd
-    Verify No Products Found
+    Search Product    qwertyuiop
+    Verify Empty Result List
+

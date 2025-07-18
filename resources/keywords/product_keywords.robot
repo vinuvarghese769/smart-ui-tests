@@ -14,3 +14,6 @@ Verify Product Search Result
 
 Verify No Products Found
     Page Should Contain    No products found
+
+Verify Empty Result List
+    Element Should Not Be Visible    xpath=//div[@class='features_items']/div[@class='col-sm-4']
