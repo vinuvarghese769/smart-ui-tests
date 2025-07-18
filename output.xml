@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.0 on darwin)" generated="2025-07-18T13:57:48.992939" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/Users/vinucv/Documents/smart-ui-tests/tests">
+<suite id="s1-s1" name="Login Tests" source="/Users/vinucv/Documents/smart-ui-tests/tests/login_tests.robot">
+<test id="s1-s1-t1" name="Login With Valid Credentials" line="8">
+<kw name="Open Browser To Login Page" owner="login_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>https://automationexercise.com/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.178687" elapsed="0.000112"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.179329" elapsed="0.000046"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//input[@data-qa='login-email']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.179469" elapsed="0.000265"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:49.178093" elapsed="0.001698"/>
+</kw>
+<kw name="Input Credentials" owner="login_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//input[@data-qa='login-email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.180127" elapsed="0.000102"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//input[@data-qa='login-password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.180329" elapsed="0.000086"/>
+</kw>
+<arg>vinuvarghesec@gmail.com</arg>
+<arg>Test@123</arg>
+<status status="PASS" start="2025-07-18T13:57:49.179954" elapsed="0.000511"/>
+</kw>
+<kw name="Click Login Button" owner="login_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>//button[@data-qa='login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.180744" elapsed="0.000085"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:49.180596" elapsed="0.000279"/>
+</kw>
+<kw name="Verify Login Successful" owner="login_keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<arg>//a[contains(text(), 'Logout')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.181149" elapsed="0.000108"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:49.180991" elapsed="0.000312"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.181456" elapsed="0.000041"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:49.177475" elapsed="0.004088"/>
+</test>
+<test id="s1-s1-t2" name="Login With Invalid Credentials" line="13">
+<kw name="Open Browser To Login Page" owner="login_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>https://automationexercise.com/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.182201" elapsed="0.000072"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.182358" elapsed="0.000036"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//input[@data-qa='login-email']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.182469" elapsed="0.000120"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:49.182033" elapsed="0.000602"/>
+</kw>
+<kw name="Input Credentials" owner="login_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//input[@data-qa='login-email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.182978" elapsed="0.000107"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//input[@data-qa='login-password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.183188" elapsed="0.000094"/>
+</kw>
+<arg>test@testmail.com</arg>
+<arg>12ab34cd</arg>
+<status status="PASS" start="2025-07-18T13:57:49.182764" elapsed="0.000571"/>
+</kw>
+<kw name="Click Login Button" owner="login_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>//button[@data-qa='login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.183707" elapsed="0.000102"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:49.183521" elapsed="0.000341"/>
+</kw>
+<kw name="Verify Error Message" owner="login_keywords">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Your email or password is incorrect!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.184154" elapsed="0.000059"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:49.183995" elapsed="0.000266"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.184415" elapsed="0.000042"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:49.181765" elapsed="0.002758"/>
+</test>
+<status status="PASS" start="2025-07-18T13:57:49.018985" elapsed="0.165878"/>
+</suite>
+<suite id="s1-s2" name="Product Search" source="/Users/vinucv/Documents/smart-ui-tests/tests/product_search.robot">
+<test id="s1-s2-t1" name="Search For Existing Product" line="9">
+<kw name="Open Browser To Product Page" owner="product_keywords" type="SETUP">
+<kw name="Open Browser To URL" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.191195" elapsed="0.000073"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.191376" elapsed="0.000037"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.191497" elapsed="0.000086"/>
+</kw>
+<arg>https://automationexercise.com/products</arg>
+<status status="PASS" start="2025-07-18T13:57:49.191005" elapsed="0.000624"/>
+</kw>
+<kw name="Wait For Element" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.191882" elapsed="0.000058"/>
+</kw>
+<arg>//input[@id='search_product']</arg>
+<status status="PASS" start="2025-07-18T13:57:49.191726" elapsed="0.000260"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:49.190807" elapsed="0.001219"/>
+</kw>
+<kw name="Search Product" owner="product_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//input[@id='search_product']</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.192305" elapsed="0.000104"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>//button[@id='submit_search']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.192495" elapsed="0.000076"/>
+</kw>
+<arg>tshirt</arg>
+<status status="PASS" start="2025-07-18T13:57:49.192157" elapsed="0.000502"/>
+</kw>
+<kw name="Verify Product Search Result" owner="product_keywords">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>${product}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.192931" elapsed="0.000051"/>
+</kw>
+<arg>tshirt</arg>
+<status status="PASS" start="2025-07-18T13:57:49.192781" elapsed="0.000244"/>
+</kw>
+<kw name="Close Browser" owner="common_keywords" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.193351" elapsed="0.000036"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:49.193185" elapsed="0.000244"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:49.190322" elapsed="0.003166"/>
+</test>
+<test id="s1-s2-t2" name="Search For Nonexistent Product" line="13">
+<kw name="Open Browser To Product Page" owner="product_keywords" type="SETUP">
+<kw name="Open Browser To URL" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.194261" elapsed="0.000064"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.194413" elapsed="0.000035"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.194527" elapsed="0.000076"/>
+</kw>
+<arg>https://automationexercise.com/products</arg>
+<status status="PASS" start="2025-07-18T13:57:49.194099" elapsed="0.000551"/>
+</kw>
+<kw name="Wait For Element" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.194897" elapsed="0.000061"/>
+</kw>
+<arg>//input[@id='search_product']</arg>
+<status status="PASS" start="2025-07-18T13:57:49.194744" elapsed="0.000359"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:49.193923" elapsed="0.001227"/>
+</kw>
+<kw name="Search Product" owner="product_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//input[@id='search_product']</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.195882" elapsed="0.000121"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>//button[@id='submit_search']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.196108" elapsed="0.000085"/>
+</kw>
+<arg>abcd</arg>
+<status status="PASS" start="2025-07-18T13:57:49.195662" elapsed="0.000584"/>
+</kw>
+<kw name="Verify No Products Found" owner="product_keywords">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>No products found</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.196559" elapsed="0.000057"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:49.196397" elapsed="0.000265"/>
+</kw>
+<kw name="Close Browser" owner="common_keywords" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT RUN" start="2025-07-18T13:57:49.196996" elapsed="0.000038"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:49.196827" elapsed="0.000252"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:49.193668" elapsed="0.003474"/>
+</test>
+<status status="PASS" start="2025-07-18T13:57:49.185248" elapsed="0.012161"/>
+</suite>
+<status status="PASS" start="2025-07-18T13:57:48.994979" elapsed="0.202864"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="4" fail="0" skip="0">Tests</stat>
+<stat name="Login Tests" id="s1-s1" pass="2" fail="0" skip="0">Tests.Login Tests</stat>
+<stat name="Product Search" id="s1-s2" pass="2" fail="0" skip="0">Tests.Product Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
