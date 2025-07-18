@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.log
+*.sqlite3
+*.env
+*.pyo
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.Python
+
+# Robot Framework result files
+results/
+*.xml
+*.html
+*.png
+
+# Mac OS
+.DS_Store
+
+# VSCode and IDEs
+.vscode/
+.idea/
+
+# Misc
+*.swp
+*.bak
+*.tmp

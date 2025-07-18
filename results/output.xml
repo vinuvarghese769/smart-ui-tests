@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.0 on darwin)" generated="2025-07-18T13:57:59.552315" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/Users/vinucv/Documents/smart-ui-tests/tests">
+<suite id="s1-s1" name="Login Tests" source="/Users/vinucv/Documents/smart-ui-tests/tests/login_tests.robot">
+<test id="s1-s1-t1" name="Login With Valid Credentials" line="8">
+<kw name="Open Browser To Login Page" owner="login_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-18T13:57:59.721419" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/login'.</msg>
+<arg>https://automationexercise.com/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-18T13:57:59.721251" elapsed="17.460573"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-18T13:58:17.188323" elapsed="1.848262"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//input[@data-qa='login-email']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-18T13:58:19.037019" elapsed="0.678090"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:59.720631" elapsed="19.995115"/>
+</kw>
+<kw name="Input Credentials" owner="login_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-18T13:58:19.717679" level="INFO">Typing text 'vinuvarghesec@gmail.com' into text field '//input[@data-qa='login-email']'.</msg>
+<arg>//input[@data-qa='login-email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-18T13:58:19.717354" elapsed="1.506966"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-18T13:58:21.224825" level="INFO">Typing text 'Test@123' into text field '//input[@data-qa='login-password']'.</msg>
+<arg>//input[@data-qa='login-password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-18T13:58:21.224543" elapsed="0.372870"/>
+</kw>
+<arg>vinuvarghesec@gmail.com</arg>
+<arg>Test@123</arg>
+<status status="PASS" start="2025-07-18T13:58:19.716672" elapsed="1.880903"/>
+</kw>
+<kw name="Click Login Button" owner="login_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-18T13:58:21.598603" level="INFO">Clicking button '//button[@data-qa='login-button']'.</msg>
+<arg>//button[@data-qa='login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-18T13:58:21.598376" elapsed="4.271981"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:58:21.598012" elapsed="4.273314"/>
+</kw>
+<kw name="Verify Login Successful" owner="login_keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-07-18T13:58:29.095989" level="INFO">Current page contains element '//a[contains(text(), 'Logout')]'.</msg>
+<arg>//a[contains(text(), 'Logout')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-07-18T13:58:25.873673" elapsed="3.225078"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:58:25.872711" elapsed="3.232618"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-18T13:58:29.108595" elapsed="0.255408"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:57:59.720072" elapsed="29.644302"/>
+</test>
+<test id="s1-s1-t2" name="Login With Invalid Credentials" line="13">
+<kw name="Open Browser To Login Page" owner="login_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-18T13:58:29.372935" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/login'.</msg>
+<arg>https://automationexercise.com/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-18T13:58:29.372257" elapsed="19.412975"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-18T13:58:48.789399" elapsed="0.291220"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//input[@data-qa='login-email']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-18T13:58:49.080802" elapsed="0.141678"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:58:29.371227" elapsed="19.851471"/>
+</kw>
+<kw name="Input Credentials" owner="login_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-18T13:58:49.223835" level="INFO">Typing text 'test@testmail.com' into text field '//input[@data-qa='login-email']'.</msg>
+<arg>//input[@data-qa='login-email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-18T13:58:49.223622" elapsed="1.766870"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-18T13:58:50.990892" level="INFO">Typing text '12ab34cd' into text field '//input[@data-qa='login-password']'.</msg>
+<arg>//input[@data-qa='login-password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-18T13:58:50.990665" elapsed="0.594325"/>
+</kw>
+<arg>test@testmail.com</arg>
+<arg>12ab34cd</arg>
+<status status="PASS" start="2025-07-18T13:58:49.223207" elapsed="2.361896"/>
+</kw>
+<kw name="Click Login Button" owner="login_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-18T13:58:51.585785" level="INFO">Clicking button '//button[@data-qa='login-button']'.</msg>
+<arg>//button[@data-qa='login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-18T13:58:51.585580" elapsed="2.353728"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:58:51.585328" elapsed="2.355261"/>
+</kw>
+<kw name="Verify Error Message" owner="login_keywords">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-18T13:59:05.009864" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-37.png"&gt;&lt;img src="selenium-screenshot-37.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-07-18T13:59:05.015478" level="FAIL">Page should have contained text 'Your email or password is incorrect!' but did not.</msg>
+<arg>Your email or password is incorrect!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-07-18T13:58:53.945127" elapsed="11.100740">Page should have contained text 'Your email or password is incorrect!' but did not.</status>
+</kw>
+<status status="FAIL" start="2025-07-18T13:58:53.942373" elapsed="11.107258">Page should have contained text 'Your email or password is incorrect!' but did not.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-18T13:59:05.053022" elapsed="0.175012"/>
+</kw>
+<status status="FAIL" start="2025-07-18T13:58:29.366321" elapsed="35.862207">Page should have contained text 'Your email or password is incorrect!' but did not.</status>
+</test>
+<status status="FAIL" start="2025-07-18T13:57:59.576972" elapsed="65.653589"/>
+</suite>
+<suite id="s1-s2" name="Product Search" source="/Users/vinucv/Documents/smart-ui-tests/tests/product_search.robot">
+<test id="s1-s2-t1" name="Search For Existing Product" line="9">
+<kw name="Open Browser To Product Page" owner="product_keywords" type="SETUP">
+<kw name="Open Browser To URL" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-18T13:59:05.261332" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/products'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-18T13:59:05.260676" elapsed="19.966361"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-18T13:59:25.232870" elapsed="3.004113"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-07-18T13:59:28.238282" elapsed="0.003463"/>
+</kw>
+<arg>https://automationexercise.com/products</arg>
+<status status="PASS" start="2025-07-18T13:59:05.260266" elapsed="22.981700"/>
+</kw>
+<kw name="Wait For Element" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-18T13:59:28.243749" elapsed="0.213969"/>
+</kw>
+<arg>//input[@id='search_product']</arg>
+<status status="PASS" start="2025-07-18T13:59:28.242671" elapsed="0.215157"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:59:05.259628" elapsed="23.198291"/>
+</kw>
+<kw name="Search Product" owner="product_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-18T13:59:28.459123" level="INFO">Typing text 'tshirt' into text field '//input[@id='search_product']'.</msg>
+<arg>//input[@id='search_product']</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-18T13:59:28.458854" elapsed="1.634660"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-18T13:59:30.096000" level="INFO">Clicking button '//button[@id='submit_search']'.</msg>
+<arg>//button[@id='submit_search']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-18T13:59:30.094910" elapsed="5.695935"/>
+</kw>
+<arg>tshirt</arg>
+<status status="PASS" start="2025-07-18T13:59:28.458330" elapsed="7.335365"/>
+</kw>
+<kw name="Verify Product Search Result" owner="product_keywords">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-18T13:59:42.513078" level="INFO">Current page contains text 'tshirt'.</msg>
+<arg>${product}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-07-18T13:59:35.795524" elapsed="6.718086"/>
+</kw>
+<arg>tshirt</arg>
+<status status="PASS" start="2025-07-18T13:59:35.794821" elapsed="6.719276"/>
+</kw>
+<kw name="Close Browser" owner="common_keywords" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-07-18T13:59:42.521772" elapsed="0.152329"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:59:42.518055" elapsed="0.156176"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:59:05.258318" elapsed="37.416026"/>
+</test>
+<test id="s1-s2-t2" name="Search For Nonexistent Product" line="13">
+<kw name="Open Browser To Product Page" owner="product_keywords" type="SETUP">
+<kw name="Open Browser To URL" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-18T13:59:42.676219" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/products'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-18T13:59:42.675892" elapsed="16.128489"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-18T13:59:58.806650" elapsed="2.684740"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-07-18T14:00:01.492039" elapsed="0.002340"/>
+</kw>
+<arg>https://automationexercise.com/products</arg>
+<status status="PASS" start="2025-07-18T13:59:42.675593" elapsed="18.818994"/>
+</kw>
+<kw name="Wait For Element" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-18T14:00:01.496581" elapsed="0.185625"/>
+</kw>
+<arg>//input[@id='search_product']</arg>
+<status status="PASS" start="2025-07-18T14:00:01.495403" elapsed="0.186915"/>
+</kw>
+<status status="PASS" start="2025-07-18T13:59:42.675330" elapsed="19.007049"/>
+</kw>
+<kw name="Search Product" owner="product_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-18T14:00:01.683236" level="INFO">Typing text 'abcd' into text field '//input[@id='search_product']'.</msg>
+<arg>//input[@id='search_product']</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-18T14:00:01.683032" elapsed="1.590917"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-18T14:00:03.275106" level="INFO">Clicking button '//button[@id='submit_search']'.</msg>
+<arg>//button[@id='submit_search']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-18T14:00:03.274452" elapsed="5.572536"/>
+</kw>
+<arg>abcd</arg>
+<status status="PASS" start="2025-07-18T14:00:01.682762" elapsed="7.165285"/>
+</kw>
+<kw name="Verify No Products Found" owner="product_keywords">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-18T14:00:57.834397" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-38.png"&gt;&lt;img src="selenium-screenshot-38.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-07-18T14:00:57.838933" level="FAIL">Page should have contained text 'No products found' but did not.</msg>
+<arg>No products found</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-07-18T14:00:08.855896" elapsed="48.994874">Page should have contained text 'No products found' but did not.</status>
+</kw>
+<status status="FAIL" start="2025-07-18T14:00:08.851240" elapsed="49.000898">Page should have contained text 'No products found' but did not.</status>
+</kw>
+<kw name="Close Browser" owner="common_keywords" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-07-18T14:00:57.854410" elapsed="0.209132"/>
+</kw>
+<status status="PASS" start="2025-07-18T14:00:57.853682" elapsed="0.210005"/>
+</kw>
+<status status="FAIL" start="2025-07-18T13:59:42.674858" elapsed="75.389088">Page should have contained text 'No products found' but did not.</status>
+</test>
+<status status="FAIL" start="2025-07-18T13:59:05.231510" elapsed="112.833884"/>
+</suite>
+<status status="FAIL" start="2025-07-18T13:57:59.553726" elapsed="178.512455"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="2" fail="2" skip="0">Tests</stat>
+<stat name="Login Tests" id="s1-s1" pass="1" fail="1" skip="0">Tests.Login Tests</stat>
+<stat name="Product Search" id="s1-s2" pass="1" fail="1" skip="0">Tests.Product Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
