@@ -11,6 +11,13 @@ This project demonstrates UI automation using Robot Framework, Selenium, and Pyt
 - Modular keyword-driven architecture
 - Easily extendable for more tests or mobile (Appium)
 
+## Review Guide
+
+To review this project:
+
+1. Clone the repository  
+   `git clone https://github.com/vinuvarghese769/smart-ui-tests`
+
 ## Setup Instructions
 Go to root folder of project
 python -m venv venv
